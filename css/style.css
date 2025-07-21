@@ -1,0 +1,123 @@
+/* Full Sky Background with Gradient */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #5ab9f7, #a7e0ff);
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+/* Animated Clouds */
+.cloud {
+  position: absolute;
+  top: 50px;
+  left: -400px;
+  background: url('cloud.png') no-repeat center;
+  background-size: contain;
+  width: 200px;
+  height: 120px;
+  opacity: 0.7;
+  animation: moveClouds 60s linear infinite;
+}
+
+.cloud:nth-child(2) {
+  top: 150px;
+  width: 300px;
+  height: 180px;
+  opacity: 0.5;
+  animation-duration: 80s;
+}
+
+.cloud:nth-child(3) {
+  top: 250px;
+  width: 150px;
+  height: 100px;
+  animation-duration: 50s;
+}
+
+/* Cloud Movement Animation */
+@keyframes moveClouds {
+  from {
+    left: -400px;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+/* Weather Card */
+.weather-container {
+  position: relative;
+  background: rgba(20, 20, 40, 0.85);
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  z-index: 1;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Temperature & Condition Section */
+.temp-section h1 {
+  font-size: 4rem;
+  margin: 0;
+}
+
+.temp-section p {
+  margin: 5px 0;
+}
+
+#location {
+  display: block;
+  margin-top: 5px;
+  font-size: 1rem;
+  opacity: 0.85;
+}
+
+/* Forecast List */
+.forecast {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.forecast li {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+  font-size: 1rem;
+  padding: 5px 10px;
+  background: #2dcdd6;
+  color: #000;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* Weather Details (Wind, Humidity, Air Pressure) */
+.details-card {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.detail-box {
+  flex: 1;
+  background: #9147ff;
+  margin: 0 5px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 8px;
+  color: #fff;
+}
+
+/* Time Display */
+.time-box {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 1.2rem;
+}

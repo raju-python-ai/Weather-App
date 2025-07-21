@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather App</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  
+  <!-- Weather Card -->
+  <div class="weather-container">
+    <div class="main-card">
+      <div class="temp-section">
+        <h1 id="temp">18°</h1>
+        <p id="condition">
+          <img src="https://openweathermap.org/img/wn/01d.png" alt="Sunny" style="width:30px; vertical-align: middle;"> Sunny
+        </p>
+        <small id="location">📍 Detecting location...</small>
+      </div>
+
+      <ul class="forecast">
+        <li><span>Today</span>
+          <span><img src="https://openweathermap.org/img/wn/01d.png" alt="Sunny" width="25"> 10~18°</span>
+        </li>
+        <li><span>Tuesday</span>
+          <span><img src="https://openweathermap.org/img/wn/02d.png" alt="Cloudy" width="25"> 12~17°</span>
+        </li>
+        <li><span>Wednesday</span>
+          <span><img src="https://openweathermap.org/img/wn/03d.png" alt="Overcast" width="25"> 10~16°</span>
+        </li>
+        <li><span>Thursday</span>
+          <span><img src="https://openweathermap.org/img/wn/04d.png" alt="Partly Cloudy" width="25"> 11~19°</span>
+        </li>
+        <li><span>Friday</span>
+          <span><img src="https://openweathermap.org/img/wn/04d.png" alt="Cloudy" width="25"> 10~14°</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="details-card">
+      <div class="detail-box">
+        <span>🌬️</span>
+        <h3>1.6 km/h</h3>
+        <p>Wind</p>
+      </div>
+      <div class="detail-box">
+        <span>💧</span>
+        <h3>75%</h3>
+        <p>Humidity</p>
+      </div>
+      <div class="detail-box">
+        <span>🌡️</span>
+        <h3>1025 hPa</h3>
+        <p>Air Pressure</p>
+      </div>
+    </div>
+
+    <div class="time-box">
+      <p>Current Time:</p>
+      <div id="live-time">--:--:--</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
